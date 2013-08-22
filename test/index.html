@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>after-transitions</title>
+    <style>
+      div {
+        background: rgb(63, 191, 191);
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        position: absolute;
+        transition: left .2s;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+
+    <script src='../build/build.js'></script>
+    <script>
+      var after = require('after-transition');
+      var el = document.querySelector('div');
+
+      after(el, function(){
+        console.count('after()');
+        move(400);
+      });
+
+      after.once(el, function(){
+        console.count('once()');
+      })
+
+      move(200);
+
+      function move(to){
+        el.style.left = to + 'px';
+      }
+    </script>
+  </body>
+</html>
