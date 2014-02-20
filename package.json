@@ -1,0 +1,16 @@
+{
+  "name": "yields-after-transition",
+  "description": "Invoke a function after transition or immediately.",
+  "version": "0.0.1",
+  "keywords": [
+    "after",
+    "transitions"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "yields-has-transitions": "git://github.com/npmcomponent/yields-has-transitions.git",
+    "ecarter-css-emitter": "git://github.com/npmcomponent/ecarter-css-emitter.git",
+    "component-once": "git://github.com/npmcomponent/component-once.git"
+  },
+  "license": "MIT"
+}
